@@ -1,0 +1,26 @@
+<script type = "text/javascript">
+	RED.nodes.registerType('ahat_adc', {
+		category: 'Raspberry Pi',
+		color: '#a6bbcf',
+		defaults: {
+			name: {value:""}
+		},
+		inputs:1,
+		outputs:4,
+		icon: "sine_wave.png",
+		label: function () {
+			return this.name||"ahat_adc";
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="ahat_adc">
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="ahat_adc">
+	<p>This node reads analog values from the Pimoroni Automation HAT onboard ADC and emits them on the output corresponding to the requested ADC channel(s)</p>
+</script>

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Copy the pattern from the core gpio node where we use a python script
+# for doing the actual I/O
+
+BASEDIR=$(dirname $0)
+sudo python -u $BASEDIR/nrahat_adc.py $@

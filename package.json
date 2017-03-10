@@ -1,0 +1,25 @@
+{
+  "name": "node-red-contrib-ahat_adc",
+  "version": "0.0.1",
+  "description": "A Node-RED Raspberry Pi node for reading analog values from the ads1015 ADC on the Pimoroni Automation HAT / pHAT",
+  "dependencies": {
+  },
+  "main": "ahat_adc.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mharsch/node-red-contrib-ahat_adc.git"
+  },
+  "node-red": {
+    "nodes": {
+      "ahat_adc": "ahat_adc.js"
+    }
+  },
+  "keywords": [
+    "node-red",
+    "raspberry pi",
+    "adc"
+  ],
+  "author": "Mike Harsch",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/mharsch/node-red-contrib-ahat_adc#readme"
+}
