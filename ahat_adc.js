@@ -42,11 +42,21 @@ module.exports = function(RED) {
 		});
 
 
+		node.child.on('close', function (code) {
+			node.running = false;
+			node.child = null;
+			if (RED.settings.verbose)
+				node.log('ahat_adc child process closed');
+
+			if (node.done)
+				node.done();
+		
+		});
+
 		node.on('close', function (done) {
+			reader.close();
 			if (node.child != null) {
 				node.done = done;
-				reader.close();
-				node.child.stdin.write("close\n");
 				node.child.kill('SIGKILL');
 				node.child = null;
 			} else {
