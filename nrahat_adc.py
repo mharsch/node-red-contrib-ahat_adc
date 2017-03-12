@@ -9,15 +9,11 @@
 
 import automationhat
 import sys
-from time import sleep
 
 while True:
     try:
         data = raw_input()
-        if 'close' in data:
-            sys.exit(0)
-        else:
-            print(automationhat.analog.read())
+        print(automationhat.analog.read())
     except (EOFError, SystemExit):
         sys.exit(0)
 
